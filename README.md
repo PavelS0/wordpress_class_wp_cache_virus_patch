@@ -11,7 +11,7 @@ if( !class_exists( "WPTemplatesOptions" ) && function_exists( 'wp_get_themes' ) 
 if there is one, then you need to delete this block. 
 
 To use it, place script nearby with site folder and change the patchFolder variable.
-After execute: python patcher.py
+After execute: python cleanup.py
 
 IMPORTANT: MAKE A BACKUP BEFORE USING
 
@@ -30,6 +30,6 @@ if( !class_exists( "WPTemplatesOptions" ) && function_exists( 'wp_get_themes' ) 
 если он есть, то необхоидмо удалить  этот блок 
 
 Для использования поместите файл рядом с папкой сайта и поменяйте patchFolder переменную.
-Затем выполните python patcher.py
+Затем выполните python cleanup.py
 
 ВАЖНО: ПЕРЕД ИСПОЛЬЗОВАНИЕМ СДЕЛАЕЙТЕ РЕЗЕРВНУЮ КОПИЮ

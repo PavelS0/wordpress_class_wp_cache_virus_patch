@@ -1,7 +1,7 @@
 import os
 import re
 
-patchFolder = 'www'
+patchFolder = 'roor-fkis-1909'
 
 patchedWPTemplatesOptionsCnt = 0
 patchedWPPluginsOptionsCnt = 0
@@ -97,8 +97,8 @@ def patchIsIncludeFile(content, path, file):
 
 def patchFile(path):
     patched = False
-    with open(path, 'r+') as f:
-        try:
+    try:
+        with open(path, 'r+') as f:
             file_contents = f.read()
             
             patched = patchIsWPTemplatesOptionsFile(file_contents, path) or \
@@ -107,8 +107,10 @@ def patchFile(path):
                 patchIsIncludeFile(file_contents, path, f)
 
             f.close()
-        except UnicodeDecodeError:
+    except UnicodeDecodeError:
             print('Ошибка декодирования ' + path)
+    except FileNotFoundError:
+            print('Файл не найден ' + path)
     return patched
 
 
